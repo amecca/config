@@ -22,9 +22,7 @@ fi
 # set PATH so it includes user's private bin if it exists
 [ -d "$HOME/.local/bin" ] && PATH="$HOME/.local/bin:$PATH"
 
-# ROOT
-source $HOME/managed_packages/root/install/bin/thisroot.sh
-
+# XDG directory specification
 export XDG_DATA_HOME=$HOME/.local/share
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_STATE_HOME=$HOME/.local/state

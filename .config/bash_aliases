@@ -24,19 +24,8 @@ alias ffprobe="ffprobe -hide_banner"
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-alias vnctunnel='ssh -L 5902:lxcms00:5902 amecca@lxplus.cern.ch'
-TBrowser() { root -l $@ -e "TBrowser b;" ; }
-rootls(){ root -l $@ -e "_file0->ls()" -q; }
 opennull(){ open "$1" &>/dev/null ; }
 
-# alias notify-permanent="notify-send -u critical -i dialog-information"
-# function monitor-ssh-notify {
-# 	 [ $# -eq 1 ] || { echo "Error: remote machine name required" ; return 1 ; }
-# 	 ssh "$1" 'rm -f /tmp/amecca/alert_fifo ; mkfifo /tmp/amecca/alert_fifo ; while cat /tmp/amecca/alert_fifo ; do sleep 5 ; done' |\
-# 	     while read text ; do
-# 	     	   notify-permanent "${text%%|*}" "${text#*|}"
-# 	     done
-# }
 
 alias cernOTP="oathtool -b --totp=SHA1   @$HOME/.local/share/secret_CERN | tr -d '\n' | xclip -sel clip"
 alias infnOTP="oathtool -b --totp=SHA256 @$HOME/.local/share/secret_INFN | tr -d '\n' | xclip -sel clip"
