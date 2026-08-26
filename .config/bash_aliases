@@ -29,3 +29,4 @@ opennull(){ open "$1" &>/dev/null ; }
 
 alias cernOTP="oathtool -b --totp=SHA1   @$HOME/.local/share/secret_CERN | tr -d '\n' | xclip -sel clip"
 alias infnOTP="oathtool -b --totp=SHA256 @$HOME/.local/share/secret_INFN | tr -d '\n' | xclip -sel clip"
+alias activate=". venv/bin/activate"
