@@ -16,6 +16,9 @@ HISTIGNORE="ls:history:less:man:exit:htop"
 # append to the history file, don't overwrite it
 shopt -s histappend
 
+# disable history expansion
+set +H
+
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTFILE=${XDG_STATE_HOME:-$HOME/.local/state}/bash_history
 HISTSIZE=1000
