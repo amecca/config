@@ -101,3 +101,5 @@ export LESS=R
 export EDITOR="emacs -nw"
 LXPLUS=amecca@lxplus.cern.ch
 CMSCONNECT=amecca@login.uscms.org
+
+export PATH="$PATH":$HOME/bin
