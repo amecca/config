@@ -25,7 +25,7 @@ alias ffprobe="ffprobe -hide_banner"
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 opennull(){ open "$1" &>/dev/null ; }
-
+clip(){ xclip -sel clip ; }
 
 alias cernOTP="oathtool -b --totp=SHA1   @$HOME/.local/share/secret_CERN | tr -d '\n' | xclip -sel clip"
 alias infnOTP="oathtool -b --totp=SHA256 @$HOME/.local/share/secret_INFN | tr -d '\n' | xclip -sel clip"
